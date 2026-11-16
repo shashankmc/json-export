@@ -2,11 +2,11 @@
 
 > Spans + labels + metadata
 
-**LegalBlocks module package** `lawnotation.json-export` v1.0.0
+**LegalBlocks module package** `json-export` v1.0.0
 
-- **Execution**: backend (provides screen `lawnotation.export`)
+- **Execution**: backend (provides screen `export`)
 - **Entrypoint**: `export.ts`
-- **Inputs**: `lawnotation.annotation_set`
+- **Inputs**: `annotation-set`
 - **Outputs**: none
 - **Artifact I/O**: via [`@legalblocks/module-runtime`](../module-runtime) (configurable adapter: localStorage by default, HTTP endpoint when configured)
 

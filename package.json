@@ -6,10 +6,10 @@
   "type": "module",
   "license": "MIT",
   "legalblocks": {
-    "package_id": "lawnotation.json-export",
+    "package_id": "json-export",
     "manifest": "package.manifest.json",
     "execution_type": "backend",
-    "provides_screen": "lawnotation.export"
+    "provides_screen": "export"
   },
   "main": "export.ts",
   "files": [

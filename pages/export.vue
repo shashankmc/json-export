@@ -28,7 +28,7 @@ const downloaded = ref(false);
 const download = async () => {
   const seedData = await $fetch('/seed-data.json');
   let annotations = {};
-  try { annotations = (await useArtifact('lb-annotations-' + seedData.doc.id).read()) ?? {}; } catch {}
+  try { annotations = (await useArtifact('annotations-' + seedData.doc.id).read()) ?? {}; } catch {}
   const payload = { document: seedData.doc, labels: seedData.labels, annotations };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);

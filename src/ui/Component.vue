@@ -29,8 +29,8 @@ const done = ref(false);
 const download = async () => {
   let annotations = {};
   try {
-    for (const { key, artifact } of await listArtifacts('lb-annotations-')) {
-      annotations[key.replace('lb-annotations-', '')] = artifact;
+    for (const { key, artifact } of await listArtifacts('annotations-')) {
+      annotations[key.replace('annotations-', '')] = artifact;
     }
   } catch {}
   const blob = new Blob([JSON.stringify(annotations, null, 2)], { type: 'application/json' });

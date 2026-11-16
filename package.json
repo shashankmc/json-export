@@ -1,0 +1,32 @@
+{
+  "name": "@legalblocks/json-export",
+  "version": "1.0.0",
+  "description": "Spans + labels + metadata",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "legalblocks": {
+    "package_id": "lawnotation.json-export",
+    "manifest": "package.manifest.json",
+    "execution_type": "backend",
+    "provides_screen": "lawnotation.export"
+  },
+  "main": "export.ts",
+  "files": [
+    "package.manifest.json",
+    "src",
+    "pages",
+    "*.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"no tests\" && exit 0"
+  },
+  "dependencies": {
+    "@legalblocks/module-runtime": "^0.1.0"
+  },
+  "devDependencies": {
+    "@lawnotation/module-sdk": "^1.0.0",
+    "typescript": "^5.4.0"
+  }
+}

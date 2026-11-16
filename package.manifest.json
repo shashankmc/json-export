@@ -1,0 +1,50 @@
+{
+  "package_id": "lawnotation.json-export",
+  "package_version": "1.0.0",
+  "package_type": "legalblocks.module_package",
+  "artifact_types": [
+    {
+      "id": "lawnotation.export_package",
+      "label": "export_package",
+      "color": "#1A1714",
+      "short": "export"
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "jsonExport",
+      "label": "JSON Export",
+      "category": "export",
+      "glyph": "⤴",
+      "family": "export",
+      "display": {
+        "sub": "*.json · gzipped",
+        "note": "Spans + labels + metadata"
+      },
+      "inputs": [
+        {
+          "port_id": "annotation_set",
+          "artifact_type": "lawnotation.annotation_set"
+        }
+      ],
+      "outputs": [],
+      "configuration": {
+        "parameters": []
+      },
+      "execution": {
+        "type": "backend",
+        "entrypoint": "export.ts"
+      },
+      "permissions": ["read_annotations"],
+      "provides_screen": {
+        "screen_type_id": "lawnotation.export",
+        "label": "Export",
+        "glyph": "⤴",
+        "desc": "Download annotations as JSON / CoNLL / CSV.",
+        "needs": ["lawnotation.export_package"],
+        "optional": [],
+        "page_template": "pages/export.vue"
+      }
+    }
+  ]
+}
